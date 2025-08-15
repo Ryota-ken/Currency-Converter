@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <div class="header">
+            <h1>Currency Converter</h1>
+            <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                🌙
+            </button>
+        </div>
+
+        <div class="converter-section">
+            <form id="converter" autocomplete="off">
+                <div class="row">
+                    <label>
+                        Amount
+                        <input type="number" id="amount" min="0" step="0.01" placeholder="Enter amount" value="1">
+                    </label>
+                </div>
+
+                <div class="row grid-3">
+                    <label>
+                        From
+                        <select id="from"></select>
+                    </label>
+                    
+                    <button type="button" id="swap" title="Swap currencies">⇄</button>
+
+                    <label>
+                        To
+                        <select id="to"></select>
+                    </label>
+                </div>
+                
+                <div class="row">
+                    <button type="submit" id="convert">Convert</button>
+                </div>
+            </form>
+        </div>
+
+        <section id="result-section" class="result-section hidden">
+            <div id="result" aria-live="polite"></div>
+            <p id="rate"></p>
+            <p id="updated"></p>
+        </section>
+
+        <div id="error" class="error" style="display: none;"></div>
+
+        <div class="favorites">
+            <div class="favorites-title">Quick Convert</div>
+            <div class="favorite-pairs" id="favoritePairs"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="totalConversions">0</div>
+                <div class="stat-label">Conversions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="favoriteFrom">-</div>
+                <div class="stat-label">Most Used</div>
+            </div>
+        </div>
+
+        <div class="history">
+            <div class="history-title">Recent Conversions</div>
+            <div id="historyList"></div>
+            <button class="clear-history" id="clearHistory">Clear History</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "currency-converter",
+  "version": "1.0.0",
+  "description": "Converts your money to other country",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . CurrencyConverter --platform=darwin --arch=x64 --out=dist --overwrite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryota-ken/Currency-Converter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ryota-ken/Currency-Converter/issues"
+  },
+  "homepage": "https://github.com/Ryota-ken/Currency-Converter#readme",
+  "devDependencies": {
+    "electron": "^32.1.0",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
+  }
+}

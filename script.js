@@ -1,4 +1,12 @@
 const API_BASE = 'https://api.frankfurter.app';
+const apiKey = process.env.API_KEY;
+fetch(`https://api.exchangeratesapi.io/v1/latest=${apiKey}`)
+  .then(response => response.json())
+  .then(data => {
+    // Your currency conversion logic, e.g., update UI with rates
+    console.log(data);
+  })
+  .catch(error => console.error('API Error:', error));
         
         const els = {
             amount: document.getElementById('amount'),
